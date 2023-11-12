@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject cloudPrefab;
     public GameObject coinPrefab;
     public int score;
+    public int playerLives;
     public int cloudsMove;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
@@ -25,7 +26,8 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("SpawnMoney", 1f, 2f);
         cloudsMove = 1;
         score = 0;
-        scoreText.text = "Score: " + score;
+        playerLives = 3;
+        livesText.text = "Lives: " + playerLives;
     }
 
     // Update is called once per frame
